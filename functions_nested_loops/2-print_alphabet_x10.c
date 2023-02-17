@@ -9,18 +9,18 @@
  */
 void
 print_alphabet_x10(void)
-
 {
 	char x = 'a';
+	int e = 0;
 
+	for (e = 0; e <= 9; e++)
+	{
+	x = 'a';
 	while (x <= 'z')
 	{
 		_putchar(x);
 		x++;
-	scanf("%c", x);
 	}
-
-
-		_putchar('\n');
-
+	_putchar('\n');
+	}
 }
