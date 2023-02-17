@@ -17,7 +17,7 @@ print_alphabet_x10(void)
 	{
 		_putchar(x);
 		x++;
-	scanf("%c", &x);
+	scanf("%c", x);
 	}
 
 
