@@ -6,8 +6,7 @@
  *
  *
  */
-int
-main(void)
+void print_alphabet(void)
 {
 	char x;
 
@@ -17,5 +16,4 @@ main(void)
 	}
 		_putchar ('\n');
 
-		return (0);
 }
