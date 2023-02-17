@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - start
+ * _islower - Entry point
+ *@c: variable
  * Return: always 0
  *
  *
