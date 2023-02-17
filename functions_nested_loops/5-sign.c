@@ -1,11 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-/**
- *@n: variable
- * Return: always 0
- *
- *
- */
 int
 print_sign(int n)
 {
