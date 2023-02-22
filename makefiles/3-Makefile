@@ -7,11 +7,15 @@ NAME = school
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean: $(RM) *~ $(NAME)
+clean:
+	$(RM) *~ $(NAME)
 
-oclean: $(OBJ) $(NAME)
+oclean:
+	$(OBJ) $(NAME)
 
-fclean: $(RM) *~ $(OBJ) $(NAME)
+fclean:
+	$(RM) *~ $(OBJ) $(NAME)
 
-re: $(RM) $(OBJ)
+re:
+	$(RM) $(OBJ)
 
