@@ -5,8 +5,7 @@
  *
  * Return: Always 0.
  */
-void
-print_umbers(void)
+void print_numbers(void)
 {
 	int s;
 
