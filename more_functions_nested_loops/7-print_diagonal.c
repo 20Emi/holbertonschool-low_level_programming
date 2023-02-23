@@ -24,7 +24,7 @@ print_diagonal(int n)
 	{
 		for (dig = 1; dig <= n; dig++)
 		{
-			for (ls = dig; ls >= n; ls++)
+			for (ls = dig; ls >= 1; ls--)
 			{
 				if (ls != 1)
 				{
