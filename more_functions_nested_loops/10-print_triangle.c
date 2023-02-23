@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
+ *print_triangle - write the triangle
+ *@size: number
  *
  * Return: Always 0.
  */
