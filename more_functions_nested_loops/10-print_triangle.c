@@ -12,6 +12,10 @@ print_triangle(int size)
 	int x, i;
 	int es;
 
+	if (size <= 0)
+	{
+		_putchar ('\n');
+	}
 	for (x = 0; x < size; x++)
 	{
 		for (es = size - 1; es > x; es--)
