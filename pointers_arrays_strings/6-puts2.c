@@ -7,7 +7,7 @@ puts2(char *str)
 {
 	size_t a;
 
-	for (a = 0; a < strlen(str); a + = 2)
+	for (a = 0; a < strlen(str); a += 2)
 	{
 		_putchar (str[a]);
 	}
