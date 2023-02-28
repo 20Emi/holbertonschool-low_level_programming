@@ -11,7 +11,7 @@ print_array(int *a, int n)
 
 		if (cont < n - 1)
 		{
-			printf(",");
+			printf(", ");
 		}
 	}
 		putchar('\n');
