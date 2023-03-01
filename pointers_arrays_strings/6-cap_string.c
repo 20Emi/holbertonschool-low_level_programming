@@ -25,9 +25,8 @@ char
 				case 125:
 					may[a] -= 32;
 			}
-			a++;
 		}
-
+		a++;
 	}
 	return (may);
 }
