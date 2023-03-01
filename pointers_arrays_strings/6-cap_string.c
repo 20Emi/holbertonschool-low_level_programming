@@ -23,6 +23,9 @@ char
 				case 41:
 				case 123:
 				case 125:
+				case 9:
+				case 10:
+				case 32:
 					may[a] -= 32;
 			}
 		}
