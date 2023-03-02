@@ -22,7 +22,7 @@ _strspn(char *s, char *accept)
 
 		doo = 0;
 
-		a++;
+		one++;
 
 		if (a != 0)
 		{
