@@ -5,7 +5,7 @@ _strspn(char *s, char *accept)
 {
 	unsigned int one = 0;
 	unsigned int doo = 0;
-	unsigned int a = 0;
+	unsigned int a = 0;/*count the common prflix length*/
 
 	while (s[one])
 	{
@@ -15,7 +15,7 @@ _strspn(char *s, char *accept)
 			{
 				a++;
 				one++;
-				doo = -1;
+				doo = -1;/*to start at the first character of the strig*/
 			}
 			doo++;
 		}
@@ -32,4 +32,3 @@ _strspn(char *s, char *accept)
 
 	return (a);
 }
-
