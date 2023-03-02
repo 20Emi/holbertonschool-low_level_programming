@@ -6,7 +6,7 @@ char
 	int s = 0;
 	int d = 0;
 	char *letters = "AaEeOoTtLl";
-	char num[] = "4433110077";
+	char num[] = "4433007711";
 
 	for (; a[s]; s++)
 	{
