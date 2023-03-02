@@ -19,12 +19,15 @@ _strspn(char *s, char *accept)
 			}
 			doo++;
 		}
+
 		doo = 0;
+
 		if (a != 0)
 		{
 			break;
 		}
 	}
+
 	return (a);
 }
 
