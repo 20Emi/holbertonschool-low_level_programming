@@ -22,6 +22,8 @@ _strspn(char *s, char *accept)
 
 		doo = 0;
 
+		a++;
+
 		if (a != 0)
 		{
 			break;
