@@ -20,8 +20,8 @@ main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
-		sum += atoi(argv[a]);
 		}
+		sum += atoi(argv[a]);
 	}
 	printf("%d\n", sum);
 
