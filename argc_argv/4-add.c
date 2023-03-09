@@ -4,7 +4,7 @@
 int
 main(int argc, char *argv[])
 {
-	int a, sum = 0;
+	int a, b = 0, sum = 0;
 
 	if (argc == 0)
 	{
@@ -13,7 +13,7 @@ main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		if (a < 48 || a > 57)
+		if (argv[a][b] < 48 || argv[a][b] > 57)
 		{
 			printf("Error\n");
 			return (1);
