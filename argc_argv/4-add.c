@@ -13,15 +13,15 @@ main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		for (a = 1; a < argc; b++)
-	{
-		if (argv[a][b] < 48 || argv[a][b] > 57)
+		for (b = 1; b < argc; b++)
 		{
-			printf("Error\n");
-			return (1);
-		}
+			if (argv[a][b] < 48 || argv[a][b] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		sum += atoi(argv[a]);
-	}
+		}
 	}
 	printf("%d\n", sum);
 
