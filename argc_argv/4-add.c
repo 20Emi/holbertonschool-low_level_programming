@@ -13,7 +13,7 @@ main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		if (!atoi(argv[a]))
+		if (a < 48 || a > 57)
 		{
 			printf("Error\n");
 			return (1);
