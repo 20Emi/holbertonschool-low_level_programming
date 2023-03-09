@@ -13,7 +13,7 @@ main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		for (b = 1; b < argc; b++)
+		for (b = 1; b < argv[a][b]; b++)
 		{
 			if (argv[a][b] < 48 || argv[a][b] > 57)
 			{
