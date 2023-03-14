@@ -8,18 +8,19 @@ char
 	int a;
 	char *dup;
 
-	if(str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (a = 0; str[a]; a++);
+	for (a = 0; str[a]; a++)
+		;
 
 	dup = malloc(sizeof(char) * a + 1);
 
 	if (dup == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	for (a = 0; str[a]; a++)
