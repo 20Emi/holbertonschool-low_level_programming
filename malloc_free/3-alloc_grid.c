@@ -35,8 +35,8 @@ int
 				for (h = a - 1; h >= 0; h--)
 				{
 					free(rid[h]); /**borra el contanido del puntero*/
-					free(rid); /**borra el puntero*/
-					return (NULL);
+				free(rid); /**borra el puntero*/
+				return (NULL);
 				}
 			}
 		}
