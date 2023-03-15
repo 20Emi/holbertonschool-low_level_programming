@@ -21,15 +21,15 @@ int
 		return (NULL);
 	}
 
-	rid = malloc(sizeof(int *) * width);
+	rid = malloc(sizeof(int *) * height);
 
 	if (rid == NULL)
 	{
 		return (NULL);
 	}
-		for (a = 0; a < width; a++)
+		for (a = 0; a < height; a++)
 		{
-			rid[a] = malloc(sizeof(int) * height);
+			rid[a] = malloc(sizeof(int) * width);
 			if (rid[a] == NULL)
 			{
 				for (h = a - 1; h >= 0; h--)
@@ -40,9 +40,9 @@ int
 				}
 			}
 		}
-		for (a = 0; a < width; a++)
+		for (a = 0; a < height; a++)
 		{
-			for (h = 0; h < height; h++)
+			for (h = 0; h < width; h++)
 				rid[a][h] = 0;
 		}
 		return (rid);
