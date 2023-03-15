@@ -3,14 +3,15 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers
- *@height: 2 dimensional array
- *@width: 2 dimensional array
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ * @width: 2 dimensional array
+ * @height: 2 dimensional array
  *
- * return: NULL
+ * Return: NULL
  */
 
-int **alloc_grid(int width, int height)
+int
+**alloc_grid(int width, int height)
 {
 	int a, h;
 	int **rid;
@@ -32,9 +33,11 @@ int **alloc_grid(int width, int height)
 			if (rid[a] == NULL)
 			{
 				for (h = a - 1; h >= 0; h--)
+				{
 					free(rid[h]); /**borra el contanido del puntero*/
 					free(rid); /**borra el puntero*/
 					return (NULL);
+				}
 			}
 		}
 		for (a = 0; a < width; a++)
