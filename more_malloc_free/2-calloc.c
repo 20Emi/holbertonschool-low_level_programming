@@ -28,7 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	for (a = 0; (size && nmemb); a++)
+	for (a = 0; a < (size * nmemb); a++)
 	{
 		oc[a] = 0; /*The memory is set to zero*/
 	}
