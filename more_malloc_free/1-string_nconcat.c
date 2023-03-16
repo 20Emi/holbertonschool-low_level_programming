@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (c = 0; c < (strlen(s1) + n); c++)
+	for (c = 0; c <= (strlen(s1) + n); c++)
 	{
 		if (c < strlen(s1))
 		{
