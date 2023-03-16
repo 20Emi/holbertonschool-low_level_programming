@@ -27,7 +27,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (a = 0; min <= max; a++, min++)
+	for (a = 0; a = min; a <= max; a++)
 	{
 		ge[a] = min;
 	}
