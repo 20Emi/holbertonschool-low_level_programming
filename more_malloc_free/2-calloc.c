@@ -13,7 +13,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int a = 0;
-	char *oc;
+	char *oc; /*pointer*/
 
 	if (nmemb == 0)
 	{
@@ -26,6 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	oc = malloc(nmemb * size);
+	/*'nmemb' stores elements, each of size 'size' byte*/
 
 	if (oc == NULL)
 	{
