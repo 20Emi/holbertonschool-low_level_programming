@@ -21,7 +21,7 @@ int
 		return (NULL);
 	}
 
-	rid = malloc(sizeof(int *) * height);
+	rid = malloc(height * sizeof(int *));
 
 	if (rid == NULL)
 	{
@@ -29,7 +29,7 @@ int
 	}
 		for (a = 0; a < height; a++)
 		{
-			rid[a] = malloc(sizeof(int) * width);
+			rid[a] = malloc(width * sizeof(int));
 			if (rid[a] == NULL)
 			{
 				for (h = a - 1; h >= 0; h--)
