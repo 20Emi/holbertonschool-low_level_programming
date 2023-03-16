@@ -12,7 +12,7 @@
 
 int *array_range(int min, int max)
 {
-	int a;
+	int s;
 	int *ge;
 
 	if (min > max)
@@ -27,9 +27,9 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (a = 0; a = min; a <= max; a++)
+	for (s = 0; min <= max; s++, min++)
 	{
-		ge[a] = min;
+		ge[s] = min;
 	}
 
 	return (ge);
