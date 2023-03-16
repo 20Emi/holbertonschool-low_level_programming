@@ -32,10 +32,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	if (a < (nmemb * size))
+	for (; a < (nmemb * size); a++)
 	{
 		oc[a] = 0; /*The memory is set to zero*/
-		a++;
 	}
 
 	return (oc);
