@@ -12,3 +12,4 @@
 - Malloc and free
 - More malloc fee
 - Preprocessor
+- structures typedef
