@@ -22,7 +22,10 @@ dog_t
 	}
 
 	if (pi->owner == NULL)
+	{
 		return (NULL);
+		free(pi);
+	}
 
 	strcpy(pi->name, name);
 	strcpy(pi->owner, owner);
