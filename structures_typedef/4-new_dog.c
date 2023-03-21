@@ -25,6 +25,7 @@ dog_t
 	{
 		return (NULL);
 		free(pi);
+		free(pi->name);
 	}
 
 	strcpy(pi->name, name);
