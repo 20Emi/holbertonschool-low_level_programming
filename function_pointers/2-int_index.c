@@ -20,9 +20,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	while (a < size)
 	{
+		a++;
 		inx = cmp(array[a]);
 		/*stores the comparision result inside the function 'cmp'*/
-		a++;
 
 		if (inx != 0)
 		{
