@@ -1,6 +1,11 @@
 #include "variadic_functions.h"
 #include<stdio.h>
 #include<stdarg.h>
+/**
+ *print_numbers - function that prints numbers
+ *@separator: string to be printed between numbers
+ *@n: number of integers passed to the function
+ */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -8,7 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	unsigned int a;
 
-	va_start (ers, n);
+	va_start(ers, n);
 
 	for (a = 0; a < n; a++)
 	{
@@ -16,11 +21,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d", va_arg(ers, int));
 		}
+		else
+		{
+			printf("%d%s", va_arg(ers, int), separator);
 
-	printf("%d%s", va_arg(ers, int), separator);
-
+		}
 	}
 	printf("\n");
 
-	va_end (ers);
+	va_end(ers);
 }
