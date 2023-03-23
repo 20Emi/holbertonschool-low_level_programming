@@ -11,11 +11,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ers;
 
-	unsigned int a;
+	unsigned int a = 0;
 
 	va_start(ers, n);
 
-	for (a = 0; a < n; a++)
+	for (; a < n; a++)
 	{
 		if (a == n - 1 || separator == NULL)
 		{
