@@ -65,7 +65,7 @@ void print_f(float a)
 }
 void print_s(char *a)
 {
-	printf("%s", a);
+	printf("%s", a != NULL ? a : "(nil)");
 }
 
 
