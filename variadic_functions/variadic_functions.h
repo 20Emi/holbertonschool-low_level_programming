@@ -15,5 +15,8 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 	/*task 3*/
 void print_all(const char * const format, ...);
-
+void print_c(char a);
+void print_i(int a);
+void print_f(float a);
+void print_s(char *a);
 #endif
