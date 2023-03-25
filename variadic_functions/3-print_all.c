@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 	va_start(list, format);
 
-	while (format[i])
+	while (format != NULL && format[i])
 	{
 		switch (format[i])
 		{
@@ -65,7 +65,7 @@ void print_f(float a)
 }
 void print_s(char *a)
 {
-	printf("%s", a != NULL ? a : "(nil)");
+	printf("%s", (a != NULL) ? a : "(nil)");
 }
 
 
