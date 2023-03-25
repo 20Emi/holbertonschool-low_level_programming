@@ -2,17 +2,15 @@
 #include<stdio.h>
 #include<stdarg.h>
 
-void print_all(const char * const format, ...)
+void
+print_all(const char * const format, ...)
 {
 
-	/*a = va_arg(list, char);
-	 * print_c(a);*/
-
 	int i = 0, a, c;
-	double b; 
+	double b;
 	char *d;
-
 	va_list list;
+
 	va_start(list, format);
 
 	while (format != NULL && format[i])
@@ -30,42 +28,41 @@ void print_all(const char * const format, ...)
 			case 'i':
 				c = va_arg(list, int);
 				 print_i(c);
-				 break;
+				break;
 			case 's':
 				 d = va_arg(list, char *);
 				 print_s(d);
-				 break;
+				break;
 		}
-		if (format[i] != '\0' && (format[i] == 'c' || format[i] == 'f' || format[i] == 'i' || format[i] == 's'))
+		if (format[i] != '\0' &&
+				(format[i] == 'c' || format[i] == 'f' ||
+				 format[i] == 'i' || format[i] == 's'))
 		{
 			if (format[i + 1] != '\0')
-			{
 				printf(", ");
-			}
 		}
 		i++;
 	}
-	
 	va_end(list);
-
 	printf("\n");
 }
-
-void print_c(char a)
+void
+print_c(char a)
 {
 	printf("%c", a);
 }
-void print_i(int a)
+void
+print_i(int a)
 {
 	printf("%d", a);
 }
-void print_f(float a)
+void
+print_f(float a)
 {
 	printf("%f", a);
 }
-void print_s(char *a)
+void
+print_s(char *a)
 {
 	printf("%s", (a != NULL) ? a : "(nil)");
 }
-
-
