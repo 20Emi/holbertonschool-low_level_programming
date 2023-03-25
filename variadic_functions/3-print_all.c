@@ -36,11 +36,11 @@ void print_all(const char * const format, ...)
 				 print_s(d);
 				 break;
 		}
-		i++;
 		if (format[i] != '\0' && (format[i] == 'c' || format[i] == 'f' || format[i] == 'i' || format[i] == 's'))
 		{
 		printf(", ");
 		}
+		i++;
 	}
 	
 	va_end(list);
