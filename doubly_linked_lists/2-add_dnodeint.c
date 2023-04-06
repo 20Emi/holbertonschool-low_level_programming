@@ -20,6 +20,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 	new->n = n;
 	new->prev = NULL;
+	new->next = *head;
 /**
  *'new->next = *head' - Establece el puntero al siguiente nodo como el puntero
  *a la cabeza de la lista actual.
@@ -33,7 +34,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	else
 	{
 		new->next = *head;
-		*head = new;
+		(*head)->prev = new;
 	}
 	return (new);
 }
