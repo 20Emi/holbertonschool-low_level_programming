@@ -15,12 +15,12 @@ sum_dlistint(dlistint_t *head)
 	}
 	nu = head->prev;
 /*recorre la lista hacia atras*/
-	while (nu != NULL)
+	/*while (nu != NULL)
 	{
 		sum += nu->n;
 		nu = nu->prev;
-/*retrocede al nodo anterior*/
-	}
+*retrocede al nodo anterior*/
+
 	return (sum);
 }
 
