@@ -15,6 +15,9 @@ void free_list(list_t *head)
 
 	free_list(head->next);
 /* Liberar la lista recursivamente, comenzando desde el siguiente nodo*/
-
+	if (head->str)
+	{
+		free(head->str);
+	}
 	free(head); /*Liberar la memoria al nodo actual*/
 }
