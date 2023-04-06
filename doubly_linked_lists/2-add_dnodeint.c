@@ -1,4 +1,4 @@
-
+#include "lists.h"
 /**
  *add_dnodeint - function that adds a new node at the beginning
  *@n: int
@@ -9,7 +9,7 @@
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new = NULL;
+	dlistint_t *new;
 
 	new = (dlistint_t *)malloc(sizeof(dlistint_t));
 
@@ -27,7 +27,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
  *'new->prev = NULL' - Establece el puntero al nodo anterior como NULL
  *porque este es el primer nodo en la lista.
  */
-	if (*head != NULL) /*NULL: pointer to the previous node*/
+	if (*head != NULL)
 	{
 		*head = new;
 	}
