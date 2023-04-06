@@ -5,21 +5,12 @@ sum_dlistint(dlistint_t *head)
 {
 	int sum = 0;
 
-	dlistint_t *nu = head;
-
-	while (nu != NULL)
+	while (head != NULL)
 	{
-		sum += nu->n;
+		sum += head->n;
 /*agrega el valor del nodo a la suma*/
-		nu = nu->next;
+		head = head->next;
 	}
-	nu = head->prev;
-/*recorre la lista hacia atras*/
-	/*while (nu != NULL)
-	{
-		sum += nu->n;
-		nu = nu->prev;
-*retrocede al nodo anterior*/
 
 	return (sum);
 }
