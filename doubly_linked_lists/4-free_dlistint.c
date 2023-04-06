@@ -14,6 +14,7 @@ void free_dlistint(dlistint_t *head)
 	{
 		if (head->next != NULL)
 			free_dlistint(head->next);
+/*recorre la lista recursivamente y liberar la memoria asignada a cada nodo.*/
 		free(head);
 	}
 }
