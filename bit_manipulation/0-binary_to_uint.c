@@ -21,6 +21,10 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 
 	num = (num << 1) | (b[a] - '0');
+/**
+* Se utiliza para convertir un caracter que representa un valor binario
+* Se resta el valor del caracter '0' al valor del caracter de la cadena 'b'
+*/
 	a++;
 	}
 	return (num);
