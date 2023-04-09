@@ -24,7 +24,7 @@ dlistint_t
 		act = act->next;
 		a++;
 	}
-	if (act->next == NULL)
+	if (act == NULL)
 	{
 		act->next = newnode;
 		newnode->prev = act;
