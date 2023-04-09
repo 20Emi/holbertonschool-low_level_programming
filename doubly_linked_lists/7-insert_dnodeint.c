@@ -19,7 +19,7 @@ dlistint_t
 		*h = newnode;
 		return (newnode);
 	}
-	while (a < idx - 1 && act->next != NULL)
+	while (a < idx - 1 && act)
 	{
 		act = act->next;
 		a++;
@@ -33,5 +33,6 @@ dlistint_t
 	newnode->next = act->next;
 	act->next = newnode;
 	newnode->next->prev = newnode;
+	act->next = newnode;
 		return (newnode);
 }
