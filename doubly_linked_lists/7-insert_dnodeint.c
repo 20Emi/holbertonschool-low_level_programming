@@ -26,9 +26,7 @@ dlistint_t
 	}
 	if (act == NULL)
 	{
-		act->next = newnode;
-		newnode->prev = act;
-		newnode->next = NULL;
+		free(newnode);
 		return (NULL);
 	}
 	newnode->prev = act;
