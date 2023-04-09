@@ -1,6 +1,10 @@
 #ifndef _main_h_
 #define _main_h_
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdarg.h>
+
 	/*Task 0*/
 unsigned int binary_to_uint(const char *b);
 	/*Task 1*/
@@ -13,5 +17,7 @@ int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 	/*Task 5*/
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
+
+int _putchar(char c);
 
 #endif
