@@ -32,7 +32,7 @@ delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	ap = current->next;
 	pr = ap->next;
-	pr = current->next;
+	current->next = pr;
 	if (pr)
 		pr->prev = current;
 	free(pr);
