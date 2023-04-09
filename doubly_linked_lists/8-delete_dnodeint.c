@@ -25,7 +25,7 @@ delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		coun++;
 	}
 
-	if (current == NULL || current->next)
+	if (current == NULL || current->next == NULL)
 	{
 		return (-1);
 	}
