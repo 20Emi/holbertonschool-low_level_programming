@@ -8,18 +8,18 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd1;
+	ssize_t fd1;
 	
-	if (filename == NULL || text_content == 0)
+	if (filename == NULL)
 		return (-1);
-
-	fd1 = open(filename, O_CREAT | O_TRUNC | O_WRONLY);
+	
+	fd1 = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0600);
 	if (fd1 == -1)
 		return (-1);
-
-	write(fd1, text_content, strlen(text_content));
+	if (text_content != NULL)
+		write(fd1, text_content, strlen(text_content));
 
 	close(fd1);
 
-	return (*text_content);
+	return (1);
 }
