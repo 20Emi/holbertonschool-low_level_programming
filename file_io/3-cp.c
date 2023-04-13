@@ -3,7 +3,10 @@
  *main - program that copies the content of a file to another file.
  *@argc:number of arguments passed to the program
  *@argv: pointer array, contains the individual arguments
- *Return: 0
+ *@file_form: original file
+ *@file_to: copy file
+ *@lei: read
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
