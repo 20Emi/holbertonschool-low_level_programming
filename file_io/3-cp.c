@@ -1,9 +1,6 @@
 #include "main.h"
-/**
- *
- *
- */
-int main (int argc, char *argv[])
+int
+main (int argc, char *argv[])
 {
 	ssize_t file_form, file_to, lei, wri;
 	char *buffer[1024];
@@ -29,13 +26,13 @@ int main (int argc, char *argv[])
 	{
 		if (lei == -1)
 		{
-			dprintf (STDERR_FILENO, "Can't read from file %s\n", argv[1]);
+			dprintf (STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		wri = write(file_to, buffer, lei);
 		if (wri == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(98);
 		}
 	}
