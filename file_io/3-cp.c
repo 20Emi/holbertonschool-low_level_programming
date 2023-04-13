@@ -1,6 +1,11 @@
 #include "main.h"
-int
-main (int argc, char *argv[])
+/**
+ *main - program that copies the content of a file to another file.
+ *@argc:number of arguments passed to the program
+ *@argv: pointer array, contains the individual arguments
+ *Return: 0
+ */
+int main(int argc, char *argv[])
 {
 	ssize_t file_form, file_to, lei, wri;
 	char *buffer[1024];
@@ -33,7 +38,7 @@ main (int argc, char *argv[])
 		if (wri == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(98);
+			exit(99);
 		}
 	}
 	if (close(file_form) == -1 || close(file_to) == -1)
