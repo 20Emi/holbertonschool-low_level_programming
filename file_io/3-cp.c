@@ -13,10 +13,10 @@ main (int argc, char *argv[])
 	file_form = open(argv[1], O_RDONLY); /*Abrir el archivo en modo lectura*/
 	if (file_form == -1)
 	{
-		dprintf (STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY);
+	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
