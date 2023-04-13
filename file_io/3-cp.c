@@ -19,7 +19,7 @@ main (int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY);
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((lei = read(file_form, buffer, 1024)))
