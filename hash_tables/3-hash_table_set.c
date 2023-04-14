@@ -7,28 +7,31 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int ind = key_index((const unsigned char *) key, ht->size);
+	unsigned long int a = ind;
 	hash_node_t *new;
-	hash_node_t	*act;
+	char *act;
 
-	if (ht == NULL)
+	if (!ht || !key || !value)
 		return (0);
 
-	if (ht->array[ind] == NULL) /*Verifica si la posición está vacía*/
-	{/*Cree un nuevo nodo*/
-		new = malloc(sizeof(hash_node_t));
-		new->key = strdup(key);
-		new->value = strdup(value);
-		new->next = NULL;
+	act = strdup(value);
 
-		/*Agrega el nodo a la tabla hash*/
-		ht->array[ind] = new;
-		}
-	else
+	while (ht->array[a])
 	{
-		act = ht->array[ind];
-		while (act->next != NULL)
-			act = act->next;
+		if (strcmp(ht->array[a]->key, key) == 0)
+		{
+			free(ht->array[a]->value);
+			ht->array[a]->value = act;
+			return (1);
+		}
+		a++;
 	}
-	act->next = new;
+
+	new = malloc(sizeof(hash_node_t));
+	new->key = strdup(key);
+	new->value = act;
+	new->next = ht->array[ind];
+	ht->array[ind] = new;
+
 	return (1);
 }
