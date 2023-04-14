@@ -19,9 +19,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new->key = strdup(key);
 		new->value = strdup(value);
 		new->next = NULL;
-
+		
+		if (new == NULL || new->key == NULL)
+			return (0);
 		/*Agrega el nodo a la tabla hash*/
 		ht->array[ind] = new;
+		new->next = ht->array[ind];
 	}
 	else
 	{
