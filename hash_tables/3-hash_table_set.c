@@ -6,7 +6,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int ind = key_index((const unsigned char *) key, ht->size);
+	unsigned long int ind = key_index((const unsigned char *) key, ht->size);
 	hash_node_t *new;
 	hash_node_t	*act;
 
