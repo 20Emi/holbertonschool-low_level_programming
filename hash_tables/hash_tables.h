@@ -1,6 +1,7 @@
 #ifndef _hash_t
 #define _hash_t
 
+#include <string.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
