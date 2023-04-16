@@ -1,9 +1,7 @@
 #include "hash_tables.h"
-/**
- *
- *
- */
-char *hash_table_get(const hash_table_t *ht, const char *key)
+
+char
+*hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int a;
 	hash_node_t *nod;
@@ -15,7 +13,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if ((ht->array[a]) == NULL)
 		return (0);
 	nod = ht->array[a];
-	
-	nod = nod->next;
+
+	for (; nod->next; nod = nod->next)
+	{}
 	return (nod->value);
 }
