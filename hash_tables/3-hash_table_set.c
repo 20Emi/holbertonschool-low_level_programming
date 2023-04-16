@@ -6,7 +6,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int ind = key_index((const unsigned char *) key, ht->size);
+	unsigned long int ind;
 	unsigned long int a;
 	hash_node_t *new;
 	char *act;
@@ -15,9 +15,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	act = strdup(value);
-	if (!act)
+	if (act == NULL)
 		return (0);
 
+	ind = key_index((const unsigned char *) key, ht->size);
 	for (a = ind; ht->array[a]; a++)
 	{
 		if (strcmp(ht->array[a]->key, key) == 0)
