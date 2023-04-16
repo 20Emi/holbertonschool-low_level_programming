@@ -5,17 +5,17 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	int hash;
+	unsigned long int a;
+	hash_node_t *nod;
 
-	if (ht == NULL)
+	if (!ht || !key)
 		return (0);
 
-	while (ht[hash].size != -1)
-	{
-		if (strcmp(ht[hash].key, key) == 0)
-			return (ht[hash].size);
-
-		hash = (hash + 1) % size;
-	}
-	return (0);
+	a = key_index((unsigned char *)key, ht->size);
+	if ((ht->array[a]) == NULL)
+		return (0);
+	nod = ht->array[a];
+	
+	nod = nod->next;
+	return (nod->value);
 }
