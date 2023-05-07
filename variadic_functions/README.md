@@ -6,5 +6,5 @@
 <h2>Project objectives</h2>
 
 <li>What are variadic functions</li>
-<li>How to use va_start, va_arg and va_end macros</li>
+<li>How to use <b>va_start, va_arg</b> and <b>va_end</b> macros</li>
 <li>Why and how to use the const type qualifier</li>
