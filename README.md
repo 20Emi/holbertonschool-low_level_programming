@@ -13,3 +13,10 @@
 - More malloc fee
 - Preprocessor
 - structures typedef
+- Function pointers
+- Variadic functions
+- Singly linked lists
+- Doubly linked lists
+- Bit manipulation
+- File i/o
+- Hash tables
